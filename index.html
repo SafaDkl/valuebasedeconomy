@@ -1,7 +1,7 @@
 <!doctype html>
 
 <html lang="en">
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /> 
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
     <title>VBE</title>
@@ -10,17 +10,13 @@
     <link
         href="../fonts.googleapis.com/css5f4d.css?family=Open+Sans:300,300italic,600,600italic,700,700italic&amp;subset=latin,cyrillic,latin-ext"
         rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="designs/_shared/css/layout-shared3c54.css?v=2.0198"
-        type="text/css" />
-    <link rel="stylesheet" href="designs/breeze/css/layout3c54.css?v=2.0198"
-        type="text/css" />
-    <link rel="stylesheet" href="designs/breeze/css/editable3c54.css?v=2.0198"
-        type="text/css" />
+    <link rel="stylesheet" href="designs/_shared/css/layout-shared3c54.css?v=2.0198" type="text/css" />
+    <link rel="stylesheet" href="designs/breeze/css/layout3c54.css?v=2.0198" type="text/css" />
+    <link rel="stylesheet" href="designs/breeze/css/editable3c54.css?v=2.0198" type="text/css" />
     <link href="" rel="shortcut icon">
     <link href="" rel="apple-touch-icon">
     <script src="../ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script
-        src="libs/js/responsivevideos/jquery.responsivevideos3c54.js?v=2.0198"></script>
+    <script src="libs/js/responsivevideos/jquery.responsivevideos3c54.js?v=2.0198"></script>
     <link
         href="../fonts.googleapis.com/css3bbc.css?family=Merriweather:300,300italic,700,700italic|Raleway:500,700,700italic&amp;subset=latin,latin-ext,cyrillic,hebrew"
         rel="stylesheet" type="text/css" />
@@ -79,12 +75,16 @@
 
         a,
         .mz_editable a {
-            color: #6dbcdb
+            color: #30b09c;
         }
 
         a:hover,
         .mz_editable a:hover {
-            color: #fc4349
+            background-position: 0 0, 0 0;
+            -webkit-transition-duration: 0.5s;
+            -moz-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+            color: #30b09c;
         }
 
         .moze-form .moze-formbutton,
@@ -131,7 +131,7 @@
         .mz_editable h1,
         .mz_editable h1.moze-megatitle,
         .mz_editable h1 a {
-            color: #6dbcdb
+            color: #30b09c;
         }
 
         .mz_editable h2,
@@ -297,12 +297,13 @@
         }
     </style>
     <style>
-        html,body {
-        margin:0;
-        padding:0;
-        overflow-x:hidden;
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
-        #myVideo{
+        #myVideo {
             overflow: hidden;
             display: flex;
             position: absolute;
@@ -313,15 +314,18 @@
             object-fit: cover;
             opacity: 0.7;
         }
-        p::after{
-        content: "\a";
-        white-space: pre;
-        }
-        p::before{
+
+        p::after {
             content: "\a";
             white-space: pre;
         }
-        #comingsoon{
+
+        p::before {
+            content: "\a";
+            white-space: pre;
+        }
+
+        #comingsoon {
             text-align: center;
             letter-spacing: 24px;
             font-size: 48px;
@@ -329,95 +333,142 @@
             color: #5743433d;
             font-weight: 900;
         }
-    @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
-    * {
-        transition: all 0.3s ease-out;
-    }
-    html, body {
-        height: 100%;
-        font-family: "Nunito", sans-serif;
-        font-size: 16px;
-    }
-    .container {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-    }
-    h3 {
-        color: #262626;
-        font-size: 17px;
-        line-height: 24px;
-        font-weight: 700;
-        margin-bottom: 4px;
-    }
-    p {
-        font-size: 17px;
-        font-weight: 400;
-        line-height: 20px;
-        color: #666;
-    }
-    p.small {
-        font-size: 14px;
-    }
-    .go-corner {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        width: 32px;
-        height: 32px;
-        overflow: hidden;
-        top: 0;
-        right: 0;
-        background-color: #32ae9b;
-        border-radius: 0 4px 0 32px;
-    }
-    .go-arrow {
-        margin-top: -4px;
-        margin-right: -4px;
-        color: white;
-        font-family: courier, sans;
-    }
-    .card1 {
-        display: block;
-        position: relative;
-        max-width: 262px;
-        background-color: #f2f8f9;
-        border-radius: 4px;
-        padding: 32px 24px;
-        margin: 12px;
-        text-decoration: none;
-        z-index: 0;
-        overflow: hidden;
-    }
-    .card1:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: -16px;
-        right: -16px;
-        background: #32ae9b;
-        height: 32px;
-        width: 32px;
-        border-radius: 32px;
-        transform: scale(1);
-        transform-origin: 50% 50%;
-        transition: transform 0.25s ease-out;
-    }
-    .card1:hover:before {
-        transform: scale(21);
-    }
-    .card1:hover p {
-        transition: all 0.3s ease-out;
-        color: rgba(255, 255, 255, 0.8);
-    }
-    .card1:hover h3 {
-        transition: all 0.3s ease-out;
-        color: #fff;
-    }
+
+        @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+        * {
+            transition: all 0.3s ease-out;
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: "Nunito", sans-serif;
+            font-size: 16px;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h3 {
+            color: #262626;
+            font-size: 17px;
+            line-height: 24px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        p {
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #666;
+        }
+
+        p.small {
+            font-size: 14px;
+        }
+
+        .go-corner {
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            top: -55px;
+            right: -79px;
+            background-color: #32ae9b;
+            border-style: solid;
+            border-width: 0 0 228px 131px;
+            transform: rotate(-28deg);
+        }
+
+        .go-arrow {
+            margin-top: -4px;
+            margin-right: -4px;
+            color: white;
+            font-family: courier, sans;
+        }
+
+        .card1 {
+            display: block;
+            position: relative;
+            max-width: 50%;
+            background-color: #fdf7fd00;
+            border-radius: 4px;
+            padding: 32px 24px;
+            text-decoration: none;
+            z-index: 0;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-position: -120px -120px, 0 0;
+
+            background-image: -webkit-linear-gradient(top left,
+                    rgba(255, 255, 255, 0.2) 0%,
+                    rgba(255, 255, 255, 0.2) 37%,
+                    rgba(255, 255, 255, 0.8) 45%,
+                    rgba(255, 255, 255, 0.0) 50%);
+            background-image: -moz-linear-gradient(0 0,
+                    rgba(255, 255, 255, 0.2) 0%,
+                    rgba(255, 255, 255, 0.2) 37%,
+                    rgba(255, 255, 255, 0.8) 45%,
+                    rgba(255, 255, 255, 0.0) 50%);
+            background-image: -o-linear-gradient(0 0,
+                    rgba(255, 255, 255, 0.2) 0%,
+                    rgba(255, 255, 255, 0.2) 37%,
+                    rgba(255, 255, 255, 0.8) 45%,
+                    rgba(255, 255, 255, 0.0) 50%);
+            background-image: linear-gradient(0 0,
+                    rgba(255, 255, 255, 0.2) 0%,
+                    rgba(255, 255, 255, 0.2) 37%,
+                    rgba(255, 255, 255, 0.8) 45%,
+                    rgba(255, 255, 255, 0.0) 50%);
+
+            -moz-background-size: 250% 250%, 100% 100%;
+            background-size: 250% 250%, 100% 100%;
+
+            -webkit-transition: background-position 0s ease;
+            -moz-transition: background-position 0s ease;
+            -o-transition: background-position 0s ease;
+            transition: background-position 0s ease;
+        }
+
+        .card1:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: -16px;
+            right: -16px;
+            background: #32ae9b;
+            height: 32px;
+            width: 32px;
+            border-radius: 32px;
+            transform: scale(1);
+            transform-origin: 50% 50%;
+            transition: transform 0.25s ease-out;
+        }
+
+        .card1:hover:before {
+            transform: scale(40);
+        }
+
+        .card1:hover p {
+            transition: all 0.3s ease-out;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .card1:hover h3 {
+            transition: all 0.3s ease-out;
+            color: #fff;
+        }
     </style>
 </head>
 
@@ -460,8 +511,8 @@
         <div id="bigbar" class="over-bigbar">
             <div class="mz_component mz_banner">
                 <video id="myVideo" loop autoplay mute>
-                    <source src="images/intro.mp4" type="video/mp4"> 
-                    <source src="images/intro.webm" type="video/webm"> 
+                    <source src="images/intro.mp4" type="video/mp4">
+                    <source src="images/intro.webm" type="video/webm">
                 </video>
             </div>
             <div id="bigbar-colorizer" style="background:transparent;"></div>
@@ -470,8 +521,9 @@
                     <div id="bigbar-overlay" style="padding-left: 0px;padding-right: 0px;">
                         <div class="bigbar-h1">
                             <div class="mz_component mz_wysiwyg mz_editable">
-                                <div class="moze-wysiwyg-editor" style="color: #363639;font-size: 4.0rem;position: relative;top: 45px;">
-                                  Elevate the economy; spark evolution.
+                                <div class="moze-wysiwyg-editor"
+                                    style="color: #363639;font-size: 4.0rem;position: relative;top: 45px;">
+                                    Elevate the economy; spark evolution.
                                 </div>
                             </div>
                         </div>
@@ -482,14 +534,15 @@
 
         <div class="mz_component mz_grid" data-cid="74212139" data-pid="9734166">
             <div class="section section-customizable section-bg-none section-text-color-none section-height-m section-width-l"
-                data-row-id="8958551" data-row-slice="text" data-row-slice-variant="text-1x1" style="padding-bottom: 5px;position: relative;">
+                data-row-id="8958551" data-row-slice="text" data-row-slice-variant="text-1x1"
+                style="padding-bottom: 5px;position: relative;">
                 <div class="container">
-                    <div class="gridrow section-content" >
+                    <div class="gridrow section-content">
                         <div class="column-12-12">
                             <div class="mz_component mz_wysiwyg mz_editable">
-                                <div class="moze-wysiwyg-editor"> 
-                                    <h1  style="text-align:center;" id="comingsoon">Coming Soon</h1>
-                                </div>     
+                                <div class="moze-wysiwyg-editor">
+                                    <h1 style="text-align:center;" id="comingsoon">Coming Soon</h1>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -500,41 +553,35 @@
 
     <div class="mz_component mz_grid" data-cid="74212139" data-pid="9734166">
         <div class="section section-customizable section-bg-none section-text-color-none section-height-m section-width-l"
-            data-row-id="8958551" data-row-slice="text" data-row-slice-variant="text-1x1" style="padding-bottom: 5px;position: relative;">
-            <div class="container">
-                <div class="gridrow section-content" >
+            data-row-id="8958551" data-row-slice="text" data-row-slice-variant="text-1x1"
+            style="padding-bottom: 5px;position: relative;">
+            <div class="mz_component mz_grid">
+                <div class="gridrow section-content">
                     <div class="column-12-12">
-                        <div class="mz_component mz_wysiwyg mz_editable">
-                            <div class="moze-wysiwyg-editor"> 
-                                <h2  style="text-align:center;">Interested to join ?</h2>
-                            </div>     
+                        <div class="mz_component mz_wysiwyg mz_editable" style="margin:5px;">
+                            <div class="moze-wysiwyg-editor">
+                                <h2 style="text-align:center;">Interested to join ?</h2>
+                            </div>
                         </div>
                     </div>
-                    <div class="container" style="text-align:center">
-                        <a class="card1" href="#">
-                            <h3>Collaboration</h3>
-                            <p class="small">Card description with lots of great facts and interesting details.</p>
+                    <div class="mz_component mz_grid" style="text-align:center;margin: 22px;">
+                        <a class="column-12-12 card1" href="#">
+                            <h3>Organizations</h3>
+                            <p class="small">VBE Offer Goverments, Unions and Business the opportunity to join the
+                                network and learn more about our practices.</p>
                             <div class="go-corner" href="#">
                                 <div class="go-arrow">
-                                →
+                                    <span>+</span>
                                 </div>
                             </div>
                         </a>
-                        <a class="card1" href="#">
-                            <h3>Business</h3>
-                            <p class="small">Card description with lots of great facts and interesting details.</p>
+                        <a class="column-12-12 card1" href="#">
+                            <h3>Individuals</h3>
+                            <p class="small">VBE includes individuals and NGOs to join our network and benefit from the
+                                this opportunity.</p>
                             <div class="go-corner" href="#">
                                 <div class="go-arrow">
-                                →
-                                </div>
-                            </div>
-                        </a>
-                        <a class="card1" href="#">
-                            <h3>Organizations & Countries</h3>
-                            <p class="small">Card description with lots of great facts and interesting details.</p>
-                            <div class="go-corner" href="#">
-                                <div class="go-arrow">
-                                →
+                                    <span>+</span>
                                 </div>
                             </div>
                         </a>
@@ -544,7 +591,7 @@
         </div>
     </div>
 
-    <footer id="bottom">
+    <footer id="bottom" style="height:30px;">
         <div id="footer">
             <div id="foottext">
                 <div class="mz_component mz_wysiwyg mz_editable">
@@ -566,4 +613,5 @@
         });
     </script>
 </body>
+
 </html>

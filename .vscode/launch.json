@@ -9,7 +9,8 @@
             "type": "firefox",
             "request": "launch",
             "reAttach": true,
-            "file": "${workspaceFolder}/index.html"
+            "file": "${workspaceFolder}/index.html",
+            "firefoxExecutable": "/usr/bin/firefox/usr/lib/firefox /etc/firefox /usr/share/man/man1/firefox.1.gz"
         },
         {
             "name": "Launch localhost",
